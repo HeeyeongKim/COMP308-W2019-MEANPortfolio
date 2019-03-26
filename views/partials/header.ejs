@@ -1,0 +1,75 @@
+<!--
+  COMP308-W2019-Assignment2 (MEANPortfolio)
+  Student Name: Heeyeong Kim
+  Student Number: 300954759
+  Date: 03/30/2019
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Content/app.css">
+</head>
+
+<body>
+  <div class="flex-column flex-md-row align-items-center px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/">
+        <img src="../Assets/Images/logo.png" style="width:50%; height:50%;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <% if (title == "Home") { %>
+          <li class="nav-item active">
+            <% } else { %>
+          <li class="nav-item">
+            <% } %>
+            <a class="nav-link" href="/"><i class="fa fa-lg fa-home"></i> Home <span
+                class="sr-only">(current)</span></a>
+          </li>
+          <% if (title == "About") { %>
+          <li class="nav-item active">
+            <% } else { %>
+          <li class="nav-item">
+            <% } %>
+            <a class="nav-link" href="/about"><i class="fa fa-lg fa-info-circle"></i> About</a>
+          </li>
+          <% if (title == "Projects") { %>
+          <li class="nav-item active">
+            <% } else { %>
+          <li class="nav-item">
+            <% } %>
+            <a class="nav-link" href="/projects"><i class="fa fa-lg fa-folder-open"></i> Projects</a>
+          </li>
+          <% if (title == "Services") { %>
+          <li class="nav-item active">
+            <% } else { %>
+          <li class="nav-item">
+            <% } %>
+            <a class="nav-link" href="/services"><i class="fa fa-lg fa-send"></i> Services</a>
+          </li>
+          <% if (title == "Contact") { %>
+          <li class="nav-item active">
+            <% } else { %>
+          <li class="nav-item">
+            <% } %>
+            <a class="nav-link" href="/contact"><i class="fa fa-lg fa-phone"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
