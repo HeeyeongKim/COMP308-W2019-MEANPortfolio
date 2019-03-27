@@ -6,7 +6,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "bootstrap": "^4.2.1",
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "bootstrap": "^4.3.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
@@ -28,6 +29,12 @@
     "@types/morgan": "^1.7.35",
     "@types/node": "^10.12.18"
   },
-  "author": "Heeyeong Kim",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeeyeongKim/COMP308-W2019-MEANPortfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HeeyeongKim/COMP308-W2019-MEANPortfolio/issues"
+  },
+  "homepage": "https://github.com/HeeyeongKim/COMP308-W2019-MEANPortfolio#readme"
 }

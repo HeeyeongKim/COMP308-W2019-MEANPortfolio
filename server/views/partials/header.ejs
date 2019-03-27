@@ -33,38 +33,43 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+          <!-- HOME -->
           <% if (title == "Home") { %>
           <li class="nav-item active">
-            <% } else { %>
+            <% } else { %> </li>
           <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/"><i class="fa fa-lg fa-home"></i> Home <span
                 class="sr-only">(current)</span></a>
           </li>
+          <!-- ABOUT -->
           <% if (title == "About") { %>
           <li class="nav-item active">
-            <% } else { %>
+            <% } else { %> </li>
           <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/about"><i class="fa fa-lg fa-info-circle"></i> About</a>
           </li>
+          <!-- PROJECTS -->
           <% if (title == "Projects") { %>
           <li class="nav-item active">
             <% } else { %>
           <li class="nav-item">
-            <% } %>
+            <% } %> </li>
             <a class="nav-link" href="/projects"><i class="fa fa-lg fa-folder-open"></i> Projects</a>
           </li>
+          <!-- SERVICES -->
           <% if (title == "Services") { %>
           <li class="nav-item active">
-            <% } else { %>
+            <% } else { %> </li>
           <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/services"><i class="fa fa-lg fa-send"></i> Services</a>
           </li>
+          <!-- CONTACT -->
           <% if (title == "Contact") { %>
           <li class="nav-item active">
-            <% } else { %>
+            <% } else { %> </li>
           <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/contact"><i class="fa fa-lg fa-phone"></i> Contact</a>
