@@ -1,29 +1,37 @@
-/*
-'index.js'
- COMP308-W2019-Assignment2 (MEANPortfolio)
- Student Name: Heeyeong Kim
- Student Number: 300954759
- Date: 03/30/2019
-*/
-
 let express = require('express');
 let router = express.Router();
 
 let indexController = require('../controllers/index');
 
-/* GET Home page. */
+/* GET home page. */
 router.get('/', indexController.displayHomePage);
 
-/* GET About page. */
+/* GET about page. */
 router.get('/about', indexController.displayAboutPage);
 
-/* GET Projects page. */
+/* GET products page. */
 router.get('/projects', indexController.displayProjectsPage);
 
 /* GET services page. */
 router.get('/services', indexController.displayServicesPage);
 
-/* GET Contact page. */
+/* GET contact page. */
 router.get('/contact', indexController.displayContactPage);
+
+/* GET - displays the Login Page */
+router.get('/login', indexController.displayLoginPage);
+
+/* POST - processes the Login Page */
+router.post('/login', indexController.processLoginPage);
+
+/* GET - displays the User Registration Page */
+router.get('/register', indexController.displayRegisterPage);
+
+/* POST - processes the User Registration Page */
+router.post('/register', indexController.processRegisterPage);
+
+/* GET - perform user logout */
+router.get('/logout', indexController.performLogout);
+
 
 module.exports = router;

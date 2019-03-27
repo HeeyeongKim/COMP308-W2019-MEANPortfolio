@@ -56,7 +56,7 @@
             <% } else { %>
           <li class="nav-item">
             <% } %> </li>
-            <a class="nav-link" href="/projects"><i class="fa fa-lg fa-folder-open"></i> Projects</a>
+          <a class="nav-link" href="/projects"><i class="fa fa-lg fa-folder-open"></i> Projects</a>
           </li>
           <!-- SERVICES -->
           <% if (title == "Services") { %>
@@ -74,6 +74,16 @@
             <% } %>
             <a class="nav-link" href="/contact"><i class="fa fa-lg fa-phone"></i> Contact</a>
           </li>
+          <!-- LOGIN -->
+          <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fa fa-lg fa-user"></i>
+            Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+              <i class="fa fa-lg fa-sign-out"></i> Logout</a></li>
+          <% } else { %>
+          <li class="nav-item"><a href="/login" class="nav-link">
+              <i class="fa fa-lg fa-sign-in"></i> Login</a></li>
+          <% } %>
         </ul>
       </div>
     </nav>

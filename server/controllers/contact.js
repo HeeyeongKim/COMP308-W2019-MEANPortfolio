@@ -22,7 +22,8 @@ module.exports.displayContactList = (req, res, next) =>{
 
             res.render('contactlist/index', {
                 title: 'Contact List',
-                contactList: contactList
+                contactList: contactList,
+                displayName: req.user ? req.user.displayName : ""
             });
             
         }
@@ -31,7 +32,8 @@ module.exports.displayContactList = (req, res, next) =>{
 
 module.exports.displayAddPage = (req, res, next) => {
     res.render('contactlist/add', {
-        title: 'Add New Contact'
+        title: 'Add New Contact',
+        displayName: req.user ? req.user.displayName : ""
     });
 }
 
@@ -111,3 +113,4 @@ module.exports.performDelete = (req, res, next) => {
         }
     });
 }
+
