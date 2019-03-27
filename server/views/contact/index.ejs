@@ -1,58 +1,30 @@
-<% include ../partials/header.ejs  %>
+<% include ../partials/header.ejs %>
 
-<div class="container" style="padding-top: 5%; padding-bottom: 5%">
-    <h1 class="display-4 text-center">CONTACT ME</h1><br />
-    <form id="contactForm" name="contactForm">
-        <div class="col-md-9 col-centered">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="txtFirstName">Firstname</label>
-                        <input id="txtFirstName" name="txtFirstName" type="text" class="form-control"
-                            placeholder="Enter First Name" required>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="txtLastName">Lastname</label>
-                        <input id="txtLastName" name="txtLastName" type="text" class="form-control"
-                            placeholder="Enter Last Name">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-9 col-centered">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="txtPhoneNum">Phone Number</label>
-                        <input id="txtPhoneNum" name="txtPhoneNum" type="text" class="form-control"
-                            placeholder="Enter Phone Number" required>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="txtEmail">Email</label>
-                        <input id="txtEmail" name="txtEmail" type="email" class="form-control" placeholder="Enter email"
-                            required>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container">
         <div class="row">
-            <div class="col-md-9 col-centered">
-                <div class="form-group">
-                    <label for="txtMsg">Message</label>
-                    <textarea id="txtMsg" name="txtMsg" class="form-control" placeholder="Please leave a message"
-                        rows="4" required></textarea>
-                </div>
-            </div>
-            <div class="col-md-12 text-center"><br />
-                <a href="javascript:sendContactInfo();" class="btn btn-success"><i class="fa fa-envelope"></i> Send</a>
-                <a href="/" class="btn btn-danger"><i class="fa fa-undo"></i> Cancel</a>
+            <div class="col-md-offset-3 col-md-6">
+                <h1><%= title %></h1>
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+                    <!-- Header Row-->
+                    <tr>
+                        <th class="text-center">First Name</th>
+                        <th class="text-center">Last Name</th>
+                        <th class="text-center">Age</th>
+                    </tr>
+
+                    <!-- Repeatable Template Row -->
+                    <% for(let count = 0; count < contactList.length; count++) { %>
+                        <tr>
+                            <td class="text-center"><%= contactList[count].firstName %></td>
+                            <td class="text-center"><%= contactList[count].lastName %></td>
+                            <td class="text-center"><%= contactList[count].age %></td>
+                        </tr>
+                    <% } %>
+                </table>
+
             </div>
         </div>
-    </form>
-</div>
+    </div>
 
 <% include ../partials/footer.ejs %>
