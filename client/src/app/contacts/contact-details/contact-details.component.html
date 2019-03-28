@@ -1,9 +1,8 @@
 <!-- Content for the Details Page -->
-<div class="container">
+<div class="container" style="width: 400px; margin: 0 auto; padding-top: 5%; padding-bottom: 5%">
+  <h1 class="display-4 text-center">{{ title }}</h1><br />
   <div class="row">
-    <div class="col-md-offset-3 col-md-6">
-      <h1>{{ title }}</h1>
-
+    <div class="container">
       <form class="form" (submit)="onDetailsPageSubmit()">
         <div class="form-group">
           <label for="FirstNameTextField">First Name</label>
@@ -22,14 +21,13 @@
           <input type="text" class="form-control" id="AgeTextField" placeholder="Enter Age" name="age"
             [(ngModel)]="contact.age" value="{{ contact.age }}" required>
         </div>
-
-        <button type="submit" class="btn btn-primary">
-          <i class="fas fa-edit"></i> {{ title }}</button>
-        <a routerLink="/contact/contact-list" class="btn btn-warning">
-          <i class="fas fa-undo"></i> Cancel</a>
+        <fieldset class="form-group text-center">
+          <button type="submit" class="btn btn-primary" style="margin: 10px">
+            <i class="fas fa-edit"></i> {{ title }}</button>
+          <a routerLink="/contact/contact-list" class="btn btn-warning" style="margin: 10px">
+            <i class="fas fa-undo"></i> Cancel</a>
+        </fieldset>
       </form>
-
-
     </div>
   </div>
 </div>

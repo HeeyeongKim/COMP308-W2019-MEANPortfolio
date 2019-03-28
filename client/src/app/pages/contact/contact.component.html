@@ -1,3 +1,17 @@
+<!-- Secured Contact List -->
+<div *ngIf="isLoggedIn()" class="container" style="width: 800px; margin: 0 auto;" >
+  <div class="row">
+    <div class="col col-md-12">
+      <div class="card">
+        <h5 class="card-header alert-success">Secured Contact List</h5>
+        <div class="card-body">
+          <a routerLink="contact-list" class="btn btn-primary"><i class="fas fa-users fa-lg"></i> Contact List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container" style="width: 800px; margin: 0 auto; padding-top: 5%; padding-bottom: 5%">
   <h1 class="display-4 text-center">CONTACT ME</h1><br />
   <form id="contactForm" name="contactForm">
@@ -46,18 +60,3 @@
     </div>
   </form>
 </div>
-
-<!-- Secured Contact List -->
-<div *ngIf="isLoggedIn()" class="container" style="width: 800px; margin: 0 auto;" >
-  <div class="row">
-    <div class="col col-md-12">
-      <div class="card">
-        <h5 class="card-header alert-success">Secured Contact List</h5>
-        <div class="card-body">
-          <a routerLink="contact-list" class="btn btn-primary"><i class="fas fa-users fa-lg"></i> Contact List</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
